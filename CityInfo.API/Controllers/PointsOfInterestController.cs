@@ -49,6 +49,7 @@ namespace CityInfo.API.Controllers
             return Ok(_mapper.Map<IEnumerable<PointOfInterestDto>>(pointsOfInterestForCity));
         }
 
+        //Get a point of interest for a city by the city id and the POI id
         [HttpGet("{pointofinterestid}", Name = "GetPointOfInterest")]
         public async Task<ActionResult<PointOfInterestDto>> GetPointOfInterest(int cityId, int pointOfInterestId) 
         {
