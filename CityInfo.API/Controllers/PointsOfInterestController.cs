@@ -86,6 +86,7 @@ namespace CityInfo.API.Controllers
             return CreatedAtRoute("GetPointOfInterest", new { cityId, pointOfInterestId = createdPointOfInterest.Id }, createdPointOfInterest);
         }
 
+        //Update a point of interest
         [HttpPut("{pointofinterestid}")]
         public async Task<ActionResult> UpdatePointOfInterest(int cityId, int pointOfInterestId, PointOfInterestForUpdateDto pointOfInterest)
         {
